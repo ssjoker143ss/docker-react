@@ -25,7 +25,7 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=hackathon-proj
+            -Dsonar.projectKey=docker-react
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}  # Use secrets for sensitive data
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
             -Dsonar.working.directory=./.scannerwork
