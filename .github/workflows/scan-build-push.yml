@@ -64,7 +64,7 @@ jobs:
         with:
           aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}  # Your AWS Access Key
           aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}  # Your AWS Secret Key
-          aws-region: us-east-1  # Replace with your AWS region
+          aws-region: "us-east-1"  # Replace with your AWS region
 
       # Step 6: Push Docker Image to AWS ECR
       - name: Push Docker Image to AWS ECR
