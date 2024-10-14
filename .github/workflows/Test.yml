@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main  # Change this to your default branch if different
+      - master
   pull_request:
     branches:
       - main  # Change this to your default branch if different
+      - master
 
 jobs:
   count:
