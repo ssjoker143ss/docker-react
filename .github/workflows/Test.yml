@@ -1,0 +1,24 @@
+name: Count Files and Directories
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch if different
+  pull_request:
+    branches:
+      - main  # Change this to your default branch if different
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Count files and directories
+        run: |
+          file_count=$(find . -type f | wc -l)
+          dir_count=$(find . -type d | wc -l)
+          echo "Total files: $file_count"
+          echo "Total directories: $dir_count"
