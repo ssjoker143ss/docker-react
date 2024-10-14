@@ -32,7 +32,7 @@ jobs:
           projectBaseDir: .
           args: >
             -Dsonar.projectKey=docker-react
-            -Dsonar.host.url=${{ env.SONAR_HOST_URL }}  # Use secrets for sensitive data
+            -Dsonar.host.url=${{ env.SONAR_HOST_URL }}
             -Dsonar.login=${{ env.SONAR_TOKEN }}
             -Dsonar.working.directory=./.scannerwork
 
