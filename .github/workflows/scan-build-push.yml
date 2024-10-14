@@ -47,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: true  # Set to true if you want to push it immediately
+          push: false
           tags: react-app:latest
 
       # Step 4: Scan the image using Trivy
