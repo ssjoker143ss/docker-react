@@ -70,4 +70,5 @@ jobs:
       # Step 6: Push Docker Image to AWS ECR
       - name: Push Docker Image to AWS ECR
         run: |
-          docker push 730335655881.dkr.ecr.us-east-1.amazonaws.com/react-app:${{ github.sha }}
+          docker tag react-app:latest 730335655881.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/react-app:${{ github.sha }}
+          docker push 730335655881.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/react-app:${{ github.sha }}
